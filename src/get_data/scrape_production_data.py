@@ -102,11 +102,19 @@ def get_production_data(file_number):
 
 def main():
     # Ensure output directory exists     
-    os.makedirs("data", exist_ok=True)    
-    # Get Operators
+    os.makedirs("data/raw", exist_ok=True)    
+    # Get available operators
     operators = get_operators()
+    print("Available Operators:")
+    for name in operators.keys():
+        print(f"- {name}")
     
-    operator_name = "HUNT OIL COMPANY"
+    # user select an operator
+    while True:
+        operator_name = input("Enter the operator name from the list above: ").strip()
+        if operator_name in operators:
+            break
+        print("Invalid operator name. Please select from the list provided.")
     operator_value = operators.get(operator_name)
     if not operator_value:
         raise Exception(f"Operator {operator_name} not found.")
@@ -131,9 +139,9 @@ def main():
     production_df = pd.DataFrame(all_production_data, columns=production_columns)
     
     # Save to CSV
-    output_file = "data/ndic_production_data.csv"
-    production_df.to_csv("data/ndic_production_data.csv", index=False)
-    welldata_df.to_csv("data/ndic_wellheader_data.csv", index=False)
+    output_file = "data/raw/ndic_production_data.csv"
+    production_df.to_csv("data/raw/ndic_production_data.csv", index=False)
+    welldata_df.to_csv("data/raw/ndic_wellheader_data.csv", index=False)
     print(f"Data saved to {output_file}")
 
 if __name__ == "__main__":
