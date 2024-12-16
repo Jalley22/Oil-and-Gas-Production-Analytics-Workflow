@@ -105,8 +105,16 @@ def main():
     os.makedirs("data", exist_ok=True)    
     # Get Operators
     operators = get_operators()
-    
-    operator_name = "HUNT OIL COMPANY"
+    print("Available Operators:")
+    for name in operators.keys():
+        print(f"- {name}")
+    # Allow selection of operator
+    while True:
+        operator_name = input("Enter the operator name for the list above: ").strip()
+        if operator_name in operators:
+            break
+        print("Invalid operator name. Please select from the list provided.")
+    # use the selected operator
     operator_value = operators.get(operator_name)
     if not operator_value:
         raise Exception(f"Operator {operator_name} not found.")
@@ -124,16 +132,15 @@ def main():
             all_well_header_data.append(well_data)
         all_production_data.extend(production_data)
 
-    # Convert to DataFrame
-    #import pdb; pdb.set_trace()
+    # Convert to DataFrame    
     welldata_df = pd.DataFrame(all_well_header_data)
     production_columns = ["File Number", "Pool", "Date", "Days", "BBLS Oil", "Runs", "BBLS Water", "MCF Prod", "MCF Sold", "Vent/Flare"]
     production_df = pd.DataFrame(all_production_data, columns=production_columns)
     
     # Save to CSV
-    output_file = "data/ndic_production_data.csv"
-    production_df.to_csv("data/ndic_production_data.csv", index=False)
-    welldata_df.to_csv("data/ndic_wellheader_data.csv", index=False)
+    output_file = "data/raw/ndic_production_data.csv"
+    production_df.to_csv("data/raw/ndic_production_data.csv", index=False)
+    welldata_df.to_csv("data/raw/ndic_wellheader_data.csv", index=False)
     print(f"Data saved to {output_file}")
 
 if __name__ == "__main__":
