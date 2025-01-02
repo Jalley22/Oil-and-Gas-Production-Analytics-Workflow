@@ -88,9 +88,12 @@ The **Oil and Gas Production Analytics Workflow** is an end-to-end Python-based 
 
 ---
 ## Example Visuals
-### Example Widget
-Here's an example of the interactive widget used for exploring outliers for specific well's production profile.
+### Interactive Widget
+Below is an example of the interactive widget used to explore outliers in a specific well's production profile. Users can adjust parameters such as the standard deviation window and zoom range to investigate the data dynamically.
 ![Example Plot](assets/widget_example.png)
+### Prophet Confidence Intervals
+Here is a comparison using Prophet's confidence intervals to identify and exclude data points outside the acceptable prediction window. This approach helps in culling potential outliers effectively.
+![Example Plot](assets/confidence_int_example.png)
 
 ---
 
