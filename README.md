@@ -53,24 +53,31 @@ The **Oil and Gas Production Analytics Workflow** is an end-to-end Python-based 
    - **Output**: raw CSV files are stored in the `data/raw` directory.
 
 2. **Analyze the Data**
-   - **Notebooks for Analysis**: Use Jupyter notebooks provided in the `notebooks/` directory for exploratory data analysis.
+   - Use the Jupyter notebooks provided in the `notebooks/` directory for exploratory data analysis.
+   - Visualize production trends and identify potential anomalies using interactive widgets and plots.
 
 3. **Forecast Production**
-   - Build machine learning models using the data in the `forecasting/` directory to predict future production values.
-  ```
+   - Use the prepared data to build machine learning models.
+   - Example models and scripts are provided in the `forecasting/` directory to predict future production values.
+  
+  ---
+
+  ## Folder Structure
+  ```plaintext
   Oil-and-Gas-Production-Analytics-Workflow/
-  |
-  ├── data/                   # Scraped data files
-  ├── notebooks/              # Jupyter notebooks for data exploration
-  ├── src/
-  │   ├── get_data/           # Web scraping scripts
-  │   ├── analysis/           # Data cleaning and EDA scripts
-  │   ├── forecasting/        # Forecasting models and scripts
-  │
-  ├── venv/                   # Virtual environment files
-  ├── requirements.txt        # Python dependencies
-  └── README.md               # Project documentation
-  ```
+|
+├── data/                   # Scraped data files
+├── notebooks/              # Jupyter notebooks for data exploration
+├── src/
+│   ├── get_data/           # Web scraping scripts
+│   ├── analysis/           # Data cleaning and EDA scripts
+│   ├── forecasting/        # Forecasting models and scripts
+│
+├── assets/                 # Static files (images, plots, etc.)
+├── venv/                   # Virtual environment files
+├── requirements.txt        # Python dependencies
+└── README.md               # Project documentation
+```
 
 
 ## Key Libraries
@@ -78,6 +85,12 @@ The **Oil and Gas Production Analytics Workflow** is an end-to-end Python-based 
 - **Data Manipulation**: pandas, numpy
 - **Visualization**: matplotlib, seaborn
 - **Machine Learning**: scikit-learn
+
+---
+## Example Visuals
+### Example Widget
+Here's an example of the interactive widget used for exploring outliers for specific well's production profile.
+![Example Plot](assets/widget_example.png)
 
 ---
 
