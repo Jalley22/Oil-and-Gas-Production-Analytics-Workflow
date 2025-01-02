@@ -16,15 +16,31 @@ The **Oil and Gas Production Analytics Workflow** is an end-to-end Python-based 
 
 ## Installation
 
+## Option 1: Using Virtual Environment**
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/Jalley22/Oil-and-Gas-Production-Analytics-Workflow.git
    cd Oil-and-Gas-Production-Analytics-Workflow
    
+2. **Set up a virtual environment:**
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    pip install -r requirements.txt
 
+3. **Run the script to get data:**
+   python src/get_data/scrape_production_data.py
+
+## Option 2: Using Conda Environment**
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Jalley22/Oil-and-Gas-Production-Analytics-Workflow.git
+   cd Oil-and-Gas-Production-Analytics-Workflow
+   
+2. **Create and activate a Conda environment:**
+   conda env create -f env_312.yml
+   conda activate oil_and_gas_production_workflow
+
+3. **Run the script to get data:**
    python src/get_data/scrape_production_data.py
 
 ## Usage

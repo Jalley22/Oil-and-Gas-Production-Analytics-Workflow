@@ -132,8 +132,7 @@ def main():
             all_well_header_data.append(well_data)
         all_production_data.extend(production_data)
 
-    # Convert to DataFrame
-    #import pdb; pdb.set_trace()
+    # Convert to DataFrame    
     welldata_df = pd.DataFrame(all_well_header_data)
     production_columns = ["File Number", "Pool", "Date", "Days", "BBLS Oil", "Runs", "BBLS Water", "MCF Prod", "MCF Sold", "Vent/Flare"]
     production_df = pd.DataFrame(all_production_data, columns=production_columns)
