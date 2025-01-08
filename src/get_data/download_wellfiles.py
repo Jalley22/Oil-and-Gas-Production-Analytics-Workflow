@@ -35,7 +35,7 @@ def main(file_numbers, output_dir="data/raw/well_files/"):
     for file_number in file_numbers:
         download_pdf(file_number, output_dir)
 
-# Example usage
+# usage
 well_header_df = pd.read_csv('./data/raw/ndic_wellheader_data.csv')
 file_numbers = sorted(well_header_df['NDIC File No'].unique())  
 main(file_numbers)

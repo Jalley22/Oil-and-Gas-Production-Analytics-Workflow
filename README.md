@@ -24,7 +24,7 @@ The **Oil and Gas Production Analytics Workflow** is an end-to-end Python-based 
    
 2. **Set up a virtual environment:**
    python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   .\venv\Scripts\Activate  # On Windows: venv\Scripts\activate
    pip install -r requirements.txt
 
 3. **Run the script to get data:**
