@@ -57,9 +57,12 @@ The **Oil and Gas Production Analytics Workflow** is an end-to-end Python-based 
    - Visualize production trends and identify potential anomalies using interactive widgets and plots.
 
 3. **Forecast Production**
-   - Use the prepared data to build machine learning models.
+   - Use the prepared data to build forecasting models.
    - Example models and scripts are provided in the `forecasting/` directory to predict future production values.
-  
+
+4. **Visualize with a Dashboard**
+   - Launch the Streamlit dashboard to interactively explore and forecast production data.
+   - Adjust parameters like decline rate, initial production, and b-factor to dynamically update production forecasts.
   ---
 
   ## Folder Structure
@@ -88,6 +91,9 @@ The **Oil and Gas Production Analytics Workflow** is an end-to-end Python-based 
 
 ---
 ## Example Visuals
+### Interactive Dashboard
+Below is an example of the Streamlit dashboard, showcasing dynamic production forecasting and visualization. Users can adjust parameters such as initial production rate, decline rate, and b-factor to update the forecast in real time.
+![Example Plot](assets/dashboard_example.png)
 ### Interactive Widget
 Below is an example of the interactive widget used to explore outliers in a specific well's production profile. Users can adjust parameters such as the standard deviation window and zoom range to investigate the data dynamically.
 ![Example Plot](assets/widget_example.png)
@@ -101,4 +107,4 @@ Here is a comparison using Prophet's confidence intervals to identify and exclud
 I welcome contributions! Some areas for enhancement include:
 - Expanding the scraper for additional data sources (Texas, etc.).
 - Adding advanced machine learning models for forecasting.
-- Visualizing results with interactive dashboards (e.g., Plotly, Dash).
+- Visualizing results with interactive dashboards (e.g., Streamlit, Plotly, Dash).
